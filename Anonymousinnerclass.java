@@ -1,4 +1,4 @@
-package com.Inheritance;
+
 
 import java.awt.*;
 import java.awt.event.*;

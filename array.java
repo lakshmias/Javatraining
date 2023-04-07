@@ -1,5 +1,3 @@
-package com.Inheritance;
-
 import static java.lang.Math.*;
 
 public class array {

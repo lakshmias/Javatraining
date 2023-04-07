@@ -1,5 +1,3 @@
-package com.Inheritance;
-
 public class Methodinnerclass {
 
 	int x =10;

@@ -1,5 +1,3 @@
-package com.Inheritance;
-
 public class staticinnerclass {
 	static int i = 10;
 

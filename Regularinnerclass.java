@@ -1,4 +1,3 @@
-package com.Inheritance;
 //regular inner class
 public class Regularinnerclass {
 

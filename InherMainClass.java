@@ -1,4 +1,3 @@
-package com.Inheritance;
  class Emp{
 	int empid; 
 	String empname = "Devi";
