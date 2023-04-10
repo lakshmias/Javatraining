@@ -1,0 +1,1 @@
+this is the list of exercises done on 10 April as part of Java training
