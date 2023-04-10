@@ -19,6 +19,7 @@ public class LambdaEg
             task.connect();
         }
         );
+        th1.start();
 
         new Thread(new Task()::connect).start();
     }
