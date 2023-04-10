@@ -109,11 +109,13 @@ public class EmployeeController implements EmployeeInterface {
 	
 	public void viewEmployee() {
 		//System.out.println(emp);
+        System.out.println("Java V7 implementation");
 		Iterator i = emplist.iterator();
 		while(i.hasNext()) {
 			System.out.println(i.next());
 		}
-		
+        System.out.println("Java V8 implementation");
+        emplist.forEach(emp->System.out.println(emp));
 	}
 	public void SerialEmp() throws IOException {
 		try{
