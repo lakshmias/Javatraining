@@ -27,8 +27,10 @@ public class LambdaEg
 
         System.out.println("users example");
         
-        User u1 = new User(11,"Nilima","nilima@gmail.com"); User u2 = new
-        User(12,"Praveen","prav@gmail.com"); User u3 = new
+        User u1 = new User(11,"Nilima","nilima@gmail.com"); 
+        User u2 = new
+        User(12,"Praveen","prav@gmail.com"); 
+        User u3 = new
         User(13,"Aarika","arika@gmail.com");
         
         
