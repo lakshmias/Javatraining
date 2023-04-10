@@ -35,13 +35,18 @@ public class LambdaEg
         List<User> li = new ArrayList<User>(); li.add(u1); li.add(u2); li.add(u3);
         System.out.println("User List :" + li);
         
-        
+        //option 1
         Iterator<User> i = li.iterator(); while (i.hasNext()) 
         {
         System.out.println(i.next());
         
         }
+
+        //option 2
         li.forEach(lis->System.out.println(lis));
+
+        //option 3
+        li.forEach(System.out::println);
     }
 }
 
