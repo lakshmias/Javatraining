@@ -17,6 +17,8 @@ public class LongRunTest {
     }
 
     public BigInteger randomBigNumber() {
+        //Method that takes long time to return a big number
+        //used for testing the future class functionalities
         BigInteger veryBig = new BigInteger(3500, new Random());
         veryBig.nextProbablePrime();
         return veryBig;
