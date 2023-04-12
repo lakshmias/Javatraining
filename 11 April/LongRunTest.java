@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 public class LongRunTest {
     public static void main(String[] args) {
         System.out.println("Before call");
+        int tes=0;
         LongRunTest l = new LongRunTest();
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             return l.randomBigNumber().toString();
