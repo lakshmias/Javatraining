@@ -5,9 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.io.Serializable;
 import java.util.Comparator;
-import java.sql.Connection;
+import java.util.Scanner;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class Employee implements Serializable,Comparable<Employee>{
 
@@ -15,8 +14,11 @@ public class Employee implements Serializable,Comparable<Employee>{
         System.out.println("Starting db ops");
         EmployeeDaoImpl oEmployeeDaoImpl=new EmployeeDaoImpl();
         Employee oEmployee=new Employee();
-        oEmployee.eid=101;
-        oEmployee.ename="Success";
+        Scanner sc=new Scanner(System.in);
+        int eNumber=sc.nextInt();
+        oEmployee.eid=eNumber;
+        String NameOfEmployee=sc.next();
+        oEmployee.ename=NameOfEmployee;
         oEmployeeDaoImpl.insertEmployee(oEmployee);
     }
 	private int eid;
