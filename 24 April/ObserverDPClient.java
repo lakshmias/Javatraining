@@ -4,8 +4,8 @@ import java.util.List;
 public class ObserverDPClient {
     public static void main(String[] args) {
         NewsAgency newsAgency = new NewsAgency();
-        NewsChannel newsChannel1 = new NewsChannel();
-        NewsChannel newsChannel2 = new NewsChannel();
+        NewsChannel newsChannel1 = new NewsChannel("NDTV");
+        NewsChannel newsChannel2 = new NewsChannel("CNBC18");
 
         newsAgency.attach(newsChannel1);
         newsAgency.attach(newsChannel2);
@@ -19,7 +19,11 @@ public class ObserverDPClient {
 }
 class NewsChannel implements Observer {
     private String news;
-
+    private String Name;
+    public NewsChannel(String _Name)
+    {
+        this.Name=_Name;
+    }
     @Override
     public void update(String message) {
         this.news = message;
@@ -27,7 +31,7 @@ class NewsChannel implements Observer {
     }
 
     private void display() {
-        System.out.println("Breaking news: " + news);
+        System.out.println(this.Name+ " Breaking news: " + news);
     }
 }
 class NewsAgency implements Subject {
