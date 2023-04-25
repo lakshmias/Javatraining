@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 //Example usage
 public class Main {
     public static void main(String[] args) {
+		
         // Create the chain of responsibility
         Employee supervisor = new Supervisor();
         Employee manager = new Manager();
@@ -14,7 +17,9 @@ public class Main {
         supervisor.processRequest(new Request(RequestType.LEAVE, 7));
         supervisor.processRequest(new Request(RequestType.LEAVE, 14));
         supervisor.processRequest(new Request(RequestType.TRAVEL, 5));
-    }
+		Scanner sc=new Scanner(System.in);
+		sc.nextLine();
+	    }
    }
 
    //Enum class representing the types of requests that can be handled
