@@ -20,7 +20,7 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		sc.nextLine();
 	    }
-   }
+	}
 
    //Enum class representing the types of requests that can be handled
 enum RequestType {
