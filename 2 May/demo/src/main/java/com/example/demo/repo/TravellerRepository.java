@@ -15,5 +15,5 @@ import com.example.demo.entity.Traveller;
 @Repository
 public interface TravellerRepository extends CrudRepository <Traveller,Long>{
 	
-
+	public Traveller addTraveller(Traveller traveller);
 }
