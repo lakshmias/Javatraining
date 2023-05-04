@@ -2,6 +2,7 @@ package com.dal.firstsprboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,8 @@ import com.dal.firstsprboot.entity.ForeignTour;
 import com.dal.firstsprboot.entity.LocalTour;
 import com.dal.firstsprboot.entity.Traveller;
 import com.dal.firstsprboot.service.TravellerService;
-
+import java.util.List;
+import java.util.Optional;
 @RestController
 
 public class TravellerRestController {
@@ -39,7 +41,14 @@ public class TravellerRestController {
 	}
 	
 	@GetMapping("/listtraveller")
+	public List<Traveller> getTravellerList()
 	{
-		travellerService.
+		return travellerService.getTravellerList();
+	}
+	
+	@GetMapping("/byid/{tid}")
+	public Optional<Traveller> getTravellerByID(@PathVariable long tid)
+	{
+		return travellerService.getTravellerByID(tid);
 	}
 }
