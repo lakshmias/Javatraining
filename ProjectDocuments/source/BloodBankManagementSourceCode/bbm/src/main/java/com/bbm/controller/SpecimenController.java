@@ -8,23 +8,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bbm.entity.Specimen;
-import com.bbm.repo.BbmSpecimenRepository;
-import com.bbm.service.BbmSpecimenService;
+import com.bbm.repo.SpecimenRepository;
+import com.bbm.service.SpecimenService;
+import java.util.*;
 
 @RestController
-public class BbmController {
+public class SpecimenController {
 	@Autowired
-	BbmSpecimenService bbmService;
+	SpecimenService bbmService;
 	
 	@Autowired
-	BbmSpecimenRepository bbmSpecimenRepository;
+	SpecimenRepository bbmSpecimenRepository;
 	
 	@GetMapping("/welcome")
 	public String helloAppln() {
 		return "Hi Blood Bank Management";
 	}
 	
-	@PostMapping("/addSpecimen")	
+	@PostMapping("/specimen")	
 	public Specimen addSpecimen(@RequestBody Specimen bbmSpecimen) {
 		return bbmService.addSpecimen(bbmSpecimen);
 	}
@@ -34,4 +35,11 @@ public class BbmController {
 	{
 		return bbmService.findSpecimentByOID(OID);
 	}
+
+	@GetMapping("/specimen")
+	public List<Specimen> getSpecimen()
+	{
+		return bbmService.getAllSpecimen();
+	}
+
 }

@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bbm.entity.Specimen;
-import com.bbm.repo.BbmSpecimenRepository;
+import com.bbm.repo.SpecimenRepository;
 
 @Service
-public class BbmSpecimenServiceImpl implements BbmSpecimenService{
+public class SpecimenServiceImpl implements SpecimenService{
 	
 	@Autowired
-	BbmSpecimenRepository bbmSpecimenRepository;
+	SpecimenRepository bbmSpecimenRepository;
 
 	@Override
 	public Specimen addSpecimen(Specimen bbmSpecimen) {
@@ -24,5 +24,11 @@ public class BbmSpecimenServiceImpl implements BbmSpecimenService{
 	public Specimen findSpecimentByOID(Long OID)
 	{
 		return bbmSpecimenRepository.findByOID(OID);
+	}
+
+	@Override
+	public List<Specimen> getAllSpecimen()
+	{
+		return (List<Specimen>)bbmSpecimenRepository.findAll();
 	}
 }
