@@ -8,4 +8,6 @@ import com.dal.firstsprboot.entity.Traveller;
 @Repository
 public interface TravellerRepository extends CrudRepository<Traveller,Long> {
 
+	Traveller findByTravellerName(String username);
+
 }
